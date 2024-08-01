@@ -1,18 +1,15 @@
-# app.py
-from flask import Flask, request, jsonify, render_template
-import pandas as pd
-import joblib
+from flask import Flask, render_template, request
+import pickle
+from utils import custom_tokenizer
 
 app = Flask(__name__)
 
-# Load the dataset
-df = pd.read_csv('drug_interactions.csv')
-
-# Load the model (if you have pre-trained a machine learning model)
-model = joblib.load('interaction_model.pkl')
+# Load the trained model
+with open('drug_interaction_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
@@ -20,15 +17,10 @@ def predict():
     drug1 = request.form['drug1']
     drug2 = request.form['drug2']
     
-    # Add your interaction prediction logic here
-    # For example, using a simple lookup in the dataframe:
-    interaction = df[(df['drug_1'] == drug1) & (df['drug_2'] == drug2)]
-    if not interaction.empty:
-        result = interaction['interaction'].values[0]
-    else:
-        result = "Unknown"
+    input_data = f"{drug1}{drug2}"
+    prediction = model.predict([input_data])[0]
+    
+    return render_template('result.html', drug1=drug1, drug2=drug2, interaction=prediction)
 
-    return jsonify({'interaction': result})
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
