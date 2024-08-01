@@ -1,0 +1,44 @@
+drug1,drug2,interaction
+Aspirin,Warfarin,Severe
+Lisinopril,Ibuprofen,Moderate
+Metformin,Ciprofloxacin,Severe
+Simvastatin,Grapefruit,Severe
+Clopidogrel,Omeprazole,Moderate
+Levothyroxine,Calcium Carbonate,Moderate
+Warfarin,Amiodarone,Severe
+Amlodipine,Simvastatin,Moderate
+Digoxin,Verapamil,Severe
+Metoprolol,Fluoxetine,Moderate
+Losartan,Potassium Chloride,Severe
+Alprazolam,Ketoconazole,Severe
+Furosemide,Lithium,Severe
+Sildenafil,Nitroglycerin,Severe
+Tramadol,Sertraline,Moderate
+Methotrexate,Ibuprofen,Severe
+Allopurinol,Azathioprine,Severe
+Phenytoin,Doxycycline,Moderate
+Spironolactone,ACE inhibitors,Severe
+Tamsulosin,Doxazosin,Moderate
+Theophylline,Ciprofloxacin,Severe
+Venlafaxine,St John's Wort,Severe
+Warfarin,Green leafy vegetables,Moderate
+Hydrochlorothiazide,Lithium,Severe
+Omeprazole,Clopidogrel,Moderate
+Prednisone,NSAIDs,Moderate
+Duloxetine,Warfarin,Severe
+Atenolol,Hydrochlorothiazide,Moderate
+Fentanyl,Alcohol,Severe
+Metformin,Insulin,Moderate
+Atorvastatin,Macrolides,Severe
+Buspirone,Monoamine oxidase inhibitors,Severe
+Rifampin,Warfarin,Moderate
+Zoloft,Tramadol,Severe
+Captopril,Allopurinol,Moderate
+Nifedipine,Digoxin,Severe
+Erythromycin,Warfarin,Moderate
+Propranolol,Clonidine,Moderate
+Tetracycline,Antacids,Severe
+Diazepam,Opioids,Severe
+Chlorpromazine,Alcohol,Moderate
+Cyclosporine,Antifungals,Moderate
+Glyburide,Insulin,Severe
